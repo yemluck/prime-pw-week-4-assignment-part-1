@@ -45,27 +45,45 @@ function multiplyThree( num1, num2, num3){
 } //end multiplyThree
 console.log('The product of 1, 2 & 3 is:', multiplyThree( 1, 2, 3 ) );
 
+/*
+function multiplyThree( num1, num2, num3){
+  return num1 * num2 * num3
+} // end multiplyThree
+
+Is this a better synthax than the above. I know you said simple is better
+
+*/
+
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
+  } else {
+    return false;
   }
-    return;
 }
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( '3 is a positive integer?', isPositive(3) );
+console.log( '0 is a positive integer?', isPositive(0) );
+console.log( 'Negative 3 is a positive integer', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
+  //let array = [];  ----> I thought I needed to declare array but got error message that array has already been declared
+  if (array.length === 0){
+    return 'undefined'
+  } else {
+    return array[array.length - 1];
+  }
+} // end getLast
+console.log('The last item in the soda array is', getLast(['coke', 'pepsi', 'fanta', 'lime', 'sprite']));
 
-}
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
