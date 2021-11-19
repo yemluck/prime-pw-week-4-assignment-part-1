@@ -32,16 +32,18 @@ function addNumbers( firstNumber , secondNumber) {
   console.log("Function to add 2 numbers: 5 & 9", addNumbers(5, 9))
 
 function addNumbers2( firstNumber, secondNumber ) {
-  console.log("in addNumbers2")
-  return firstNumber + secondNumber //test 2
+  console.log("in addNumbers2");
+  return firstNumber + secondNumber; //test 2
 }
 console.log('Function to add 2 numbers: 8 & 10:', addNumbers2(8, 10));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
-}
+function multiplyThree( num1, num2, num3){
+  let multiplication = num1 * num2 * num3;
+  return multiplication;
+} //end multiplyThree
+console.log('The product of 1, 2 & 3 is:', multiplyThree( 1, 2, 3 ) );
 
 
 // 5. Function that will return true if a number is positive, 
