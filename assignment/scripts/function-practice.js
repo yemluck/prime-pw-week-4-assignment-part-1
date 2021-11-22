@@ -137,7 +137,15 @@ console.log(" The sum of all numbers in the array is", sumAll([4,7,9,5]))
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-
+function positive(array){
+  let positiveArray = [];
+  for (x of array){
+    if (x > 0){
+      positiveArray.push(x);
+    }
+  }
+  return positiveArray;
+}
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
