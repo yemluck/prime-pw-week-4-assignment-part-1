@@ -147,6 +147,29 @@ function positive(array){
   return positiveArray;
 }
 
+let randomIntegers = [-3, -2, -1, 2, 4, -5, 0, 2, -3]
+console.log('this should return positive integers in the initial array only', positive(randomIntegers)); // testing function positive(array)
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+
+// Your task is to create the functin isDivideBy or is_divide_by to check if an interger number is divisible by both integers a and b.
+
+function isDivideBy(number, a, b){
+  number = parseInt(number); // to make sure input parameters are numbers
+  a = parseInt(a); 
+  b = parseInt(b);
+  if (number % a === 0 && number % b === 0){
+    return true;
+  }
+  return false;
+}
+
+//test
+console.log('Should return true', isDivideBy(12, 3, 4));
+console.log('Should return true', isDivideBy(12, -3, 4));
+console.log('Should return false', isDivideBy(12, 3, 5));
+console.log('Should return true', isDivideBy(12.8, 3.2, 4.7)); // parameters are converted to integers
+console.log('Should return false', isDivideBy(12, 3, true)); // true will be converted to NaN
